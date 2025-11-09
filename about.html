@@ -7,7 +7,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
 <title>Portfolio</title>
-
+<body>
 <header>
   <div id="hamburger" class="hamburger">☰</div>
   <nav id="menu" class="menu">
@@ -52,7 +52,7 @@ Our bodies gradually change—our skin, our strength, and even our memories—sh
   <p>kimiaki yasui</p>
   <p>imagination skill and intersting about sky</p></footer>
 <style>
-  body html{
+  html,body{
     padding: 0;
     margin: 0;
   }
@@ -337,17 +337,22 @@ font-family: Georgia, 'Times New Roman', Times, serif;}
     .street{
         position: absolute;
         left: 8%;
-        top: 90%; /* riverの下に配置したい場合 */
+        top: 80%; /* riverの下に配置したい場合 */
         transform: translateX(-50%);
         width: 80%; /* 必要に応じて幅調整 */
         height: 170px;
         margin: 0;
         padding: 0;
         padding-top: 0;
+        
                transition: transform 0.8s ease, opacity 0.8s ease; /* 速度を少し長くしてスムーズに */
     transform: translateY(50px); /* 初期位置: 下に50px */
     opacity: 0; /* 初期は透明 */
     }
+        .street.active {
+    transform: translateY(0); /* 元の位置に移動 */
+    opacity: 1; /* 完全に表示 */
+}
     
     
     .page2{
@@ -387,6 +392,12 @@ font-family: Georgia, 'Times New Roman', Times, serif;}
         
         
     }
+.street {
+    opacity: 1 !important;                 /* 透明にならない */
+  
+    z-index: 9999 !important;              /* 他の画像に隠れない */
+            /* 絶対に画面内に表示 */
+}
 
 </style>
 </head>
