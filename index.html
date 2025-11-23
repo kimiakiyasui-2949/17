@@ -48,12 +48,14 @@ For Kent, makeup is more than cosmetics—it’s a form of communication. His wo
          
         <div id="gallery" class="content-item">
            <div class="slideshow-container">
+         <img src="street3.jpg" class="slide-img">
         <img src="show.jpg" class="slide-img">
-        <img src="street3.jpg" class="slide-img">
+       
         <img src="street6.jpg" class="slide-img">
         <img src="kyoto.jpg" class="slide-img">
+       
     </div>
-            <h1>My Previous Works</h1>
+            
             <p class="text">My body of work reflects a deep passion for beauty, culture, and storytelling through makeup and photography. Over the years, I have created a wide range of pieces inspired by the vibrant energy of New York, the elegance of Kyoto, and the bold creativity found in fashion shows and street culture.
 
 My street photography captures raw emotion and individuality, highlighting the unique style and spirit of people in their everyday environments. The show-focused works express a more dramatic side—looks designed for runways, creative shoots, and artistic concepts that push beyond traditional makeup styles.
@@ -67,7 +69,7 @@ These works together tell the story of my creative journey—one that continues 
         <div id="contact" class="content-item">
             <img src="style.jpg" alt=""class="style">
            
-            <footer>usubo kento .com</footer></p>
+           <footer>usubo kento .com</footer></p>
         </div>
     </div>
 
@@ -130,7 +132,7 @@ These works together tell the story of my creative journey—one that continues 
     position: absolute;
     width: 100%;
     height: auto;
-    left:-30px;
+    left: 20px;
     opacity: 0;
     transition: opacity 1s ease-in-out;
 }
@@ -139,10 +141,6 @@ These works together tell the story of my creative journey—one that continues 
     opacity: 1;
 }
 
-.content-item img {
-    max-width: 40%;
-    margin-bottom: 20px;
-}
 
 .content-item .photo-3{
     position: absolute;
@@ -150,35 +148,74 @@ These works together tell the story of my creative journey—one that continues 
     max-width:100px;
 }
 .content-item img {
-    max-width: 40%;
+    width: 200px;
+    max-width: 100%;
     margin-bottom: 20px;
 }
 .content-item .red{
     max-width:200px;
 }
-.content-item .text{
-    position: absolute;
-    top:550px;
-}
+.content-item .text {
+        position: absolute;
+        top:380px !important; /* 好きな高さに調整 */
+        font-size: 16px;       /* 必要なら文字サイズ調整 */
+        padding: 0 10px;       /* 横余白あると読みやすい */
+    }
 .content-item .style{
-    width: 80%;
+    width: %;
 }
+
 footer {
     text-align: left;
     padding-bottom: 36px;
 }
 @media (max-width: 380px) {
+    .content-item img {
+        max-width: 100% !important;
+        width: 100% !important;
+    }
+
+    .slideshow-container {
+        max-width: 100% !important;
+    }
+
+    .slide-img {
+        width: 100% !important;
+        height: auto !important;
+        left: 0 !important;
+    }
+    /* About の red.jpg */
+    .red {
+        max-width: 100% !important;
+    }
+
+    /* street4.jpg */
+    .photo {
+        max-width: 100% !important;
+        width: 100% !important;
+    }
+
+
+    /* About の red.jpg も大きく */
+    .red {
+        max-width: 80%;
+    }
     .content-item.active {
         text-align: center;
         display: block;
     }
+    .content-item .streer {
+    max-width: 200px;
+    margin-bottom: 20px;
+}
 
-    .content-item img {
-        width: 100%; /* ← スマホ画面にピッタリ */
-        max-width: 100%; /* ← はみ出さない保険 */
-        height: auto; /* ← 縦横比を保つ */
-        margin-bottom: 20px;
-    }
+
+
+.content-item .red{
+    max-width:300px;
+}
+ 
+    
        .container {
     display: flex;
     height: 100vh;
@@ -201,30 +238,17 @@ footer {
     cursor: pointer;
     
 }
-.content-item p{
-    text-align: left;
-    top:4px;
-    font-size: 8px;
-}
-.slide-img {
-    position: absolute;
-    width: 100%;
-    height: auto;
-    left:10px;
-    opacity: 0;
-    transition: opacity 1s ease-in-out;
-}
-.content-item .text{
-    position: absolute;
-    top:300px;
-}
+
 footer{
-    position: absolute;
-    left:7px;
-    font-size: 8px;
+    text-align: right;
+    padding-top: 300px;
+    margin-top: 100px;
+ 
 }
  h1{
     font-size:10px;
+   position: absolute;
+   top:59%;
  }
 }
 
